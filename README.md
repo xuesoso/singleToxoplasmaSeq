@@ -8,7 +8,7 @@ This respository includes scripts and jupyter notebooks used to re-generate anal
 
 Interactive atlas
 -----------------
-We have also generated an interactive browser to visualize our scRNA-seq dataset. [Link here](http://st-atlas.org)
+We have also generated an interactive browser to visualize our scRNA-seq dataset. [Visit here](http://st-atlas.org)
 
 <img src="./images/st_atlas_example.png" title="Screenshot" width="500"/>
 
@@ -45,9 +45,10 @@ pip install requirements.txt
 
 Lastly, you can now open up the jupyter notebook and run each cell to regenerate the analysis results.
 ```bash
-jupyter-notebook ./Scripts/figures.ipynb
+jupyter-notebook Scripts/figures.ipynb
 ```
 
+**Data description:** See "data_description.csv" for a description of the data files in Submission_analysis/Data/
 
 
 <details><summary> What is in "Scripts/" </summary>
