@@ -129,5 +129,5 @@ dmypy.json
 .pyre/
 
 # Data folder
-Submission_analysis/
+Submission_analysis/*
 *.tar.gz
