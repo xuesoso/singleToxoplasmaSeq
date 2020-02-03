@@ -21,9 +21,16 @@ git clone https://github.com/xuesoso/singleToxoplasmaSeq
 
 Then download the bundled scripts and data to the repository folder in order to regenerate analysis results and figures.
 ```bash
-wget link 
+wget https://drive.google.com/file/d/1-lMhILWM8xLrLRul0YFO3_4Tvij5xVeV/view?usp=sharing
 tar -xvf Submission_analysis.tar.gz
 ```
+
+Data can also be downloaded by clicking this button
+
+<p>
+<a href="https://drive.google.com/file/d/1-lMhILWM8xLrLRul0YFO3_4Tvij5xVeV/view?usp=sharing" download>Download data</a>
+</p>
+
 
 **Optional:**
 Assuming that one has [anaconda distribution](https://www.anaconda.com/distribution/) of python, create an environment for python 3.6.8 (should work on python 3.6+).
