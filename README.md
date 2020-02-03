@@ -21,14 +21,14 @@ git clone https://github.com/xuesoso/singleToxoplasmaSeq
 
 Then download the bundled scripts and data to the repository folder in order to regenerate analysis results and figures.
 ```bash
-wget https://drive.google.com/file/d/1-lMhILWM8xLrLRul0YFO3_4Tvij5xVeV/view?usp=sharing
+wget https://drive.google.com/file/d/1-lMhILWM8xLrLRul0YFO3_4Tvij5xVeV
 tar -xvf Submission_analysis.tar.gz
 ```
 
 Data can also be downloaded by clicking this button
 
 <p>
-<a href="https://drive.google.com/file/d/1-lMhILWM8xLrLRul0YFO3_4Tvij5xVeV/view?usp=sharing" download>Download data</a>
+<a href="https://drive.google.com/file/d/1-lMhILWM8xLrLRul0YFO3_4Tvij5xVeV" download>Download data</a>
 </p>
 
 
