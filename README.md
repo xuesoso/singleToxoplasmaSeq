@@ -2,7 +2,7 @@
 
 Description
 ---------------------
-A respository that includes scripts and jupyter notebooks to re-generate analysis results of "A single-parasite transcriptional atlas of Toxoplasma gondii reveals novel control of antigen expression" (2020).
+A respository that includes scripts and jupyter notebooks to re-generate analysis results of ["A single-parasite transcriptional atlas of Toxoplasma gondii reveals novel control of antigen expression" (2020)](https://www.biorxiv.org/content/10.1101/656165v1?rss=1).
 
 Interactive atlas
 -----------------
