@@ -23,14 +23,14 @@ wget link
 tar -xvf Submission_analysis.tar.gz
 ```
 
-** Optional **
+**Optional**
 Assuming that one has [anaconda distribution](https://www.anaconda.com/distribution/) of python, create an environment for python 3.6.8 (should work on python 3.6+).
 ```bash
 conda create -n toxoSeq python=3.6.8 ipykernel
 conda activate toxoSeq
 ```
 
-** Optional **
+**Optional**
 If you just set up a new conda environment, you need to set up the jupyter kernel as well in order for jupyter notebook to run on this backend.
 ```bash
 python -m ipykernel install --user
