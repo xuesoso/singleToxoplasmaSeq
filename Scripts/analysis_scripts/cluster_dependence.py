@@ -1,6 +1,7 @@
 from _loadlib.toxo_lib import *
 from sklearn.neighbors import KernelDensity
 from scipy.stats import ks_2samp
+script_dir = (os.path.dirname(os.path.realpath(__file__)))
 
 def shuffle_data(X):
     if isinstance(X, pd.DataFrame):
@@ -51,9 +52,6 @@ def automatic_supervariant_genes_finder(X, projection, genes, negativeGenes,\
     elif method == 'test':
         negative_pvals = compute_kde_null(X, num=shuffle_times,
                                           verbose=verbose)
-# negative_pvals = pd.DataFrame(df_null_output.values.mean(axis=0),
-                                  # index=df_null_output.columns,
-                                  # columns=['pvals'])
     negative_pvals = negative_pvals.sort_values('pvals', ascending=False)
     genes_pvals = negative_pvals.loc[genes].copy()
     genes_pvals = genes_pvals.sort_values('pvals', ascending=False)
@@ -116,6 +114,37 @@ def scramble(a, axis=0):
     idx = np.random.choice(n, n, replace=False)
     b = b[..., idx]
     return b.swapaxes(axis, -1)
+
+def get_gene_family(gpd, prefix='TGME49_'):
+    ribosomalRNA = sat.get_gene('ribosomal RNA', gpd)['gene'].values
+    ribosomalRNA = np.array([x for x, y in zip(ribosomalRNA,
+                       sat.get_product(ribosomalRNA, gpd))
+                             if 'ribosomal RNA ' not in y])
+    gene_dict = {}
+    gene_dict['Ribosomal RNA'] = ribosomalRNA
+    genes_of_interest = ['SRS', 'ERCC-', 'rhoptry', 'ROP', 'RON', 'microneme',
+                         'IMC', 'hypothetical protein', 'gondii family A',
+                        'gondii family B', 'gondii family C', 'dense granule',
+                        'GRA']
+    key_names = ['SRS', 'ERCC', 'ROP', 'ROP', 'ROP', 'MIC', 'IMC',
+                 'Hypothetical', 'Family A', 'Family B', 'Family C',
+                 'GRA', 'GRA']
+    gra = [prefix + str(x) for x in pd.read_csv(script_dir+'/Bradley_GRAs.csv',
+                                           sep=',', index_col=0).index.values]
+    gene_dict['GRA'] = gra
+    seen = []
+    for ind, i in enumerate(genes_of_interest):
+        genes = sat.get_gene(i, gpd)['gene'].values.astype(str)
+        seen = np.concatenate([seen, genes])
+        if key_names[ind] not in list(gene_dict.keys()):
+            gene_dict[key_names[ind]] = genes
+        else:
+            gene_dict[key_names[ind]] = np.unique(np.concatenate([
+                gene_dict[key_names[ind]], genes]))
+    seen = np.array(seen).flatten()
+    all_g = np.array(list(gpd.keys()))
+    gene_dict['Others'] = np.setdiff1d(all_g, seen)
+    return gene_dict
 
 class knn_approach():
     def __init__(self, X, weights, bw=None, num=100, k=5, metric='euclidean',

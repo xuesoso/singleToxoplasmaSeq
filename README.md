@@ -48,32 +48,35 @@ jupyter-notebook ./Scripts/figures.ipynb
 
 
 
-<details><summary> **What is in "Scripts/"** </summary>
+<details><summary> What is in "Scripts/" </summary>
 <p>
 
-```bash
---Scripts----figures.ipynb : Jupyter notebook to regenerate figures and analysis results.
+--Scripts ----> figures.ipynb : Jupyter notebook to regenerate figures and analysis results.
     |
-    |------->_loadlib--->utils/ : A list of utility plotting and analysis functions required. Imported library call name is "sat"
-                |
-                |------->rh07.py : Library and variable definitions for RH (rh07; 384-well) dataset analysis.
-                |
-                |------->me49_011.py : Library and variable definitions for ME49 (me49_011) dataset analysis.
-                |
-                |------->pru0506.py : Library and variable definitions for Pru (pru0506) dataset analysis.
-                |
-            _preprocess->rh07.py : Preprocessing parameter and plots for RH (rh07; 384-well) dataset analysis.
-                |
-                |------->rh019.py : Preprocessing parameter and plots for RH (rh019; 96-well) dataset analysis.
-                |
-                |------->me49_011.py : Preprocessing parameter and plots for ME49 (me49_011) dataset analysis.
-                |
-                |------->pru0506.py : Preprocessing parameter and plots for Pru (pru0506) dataset analysis.
-                |
-                |------->readme.txt : A textfile with descriptions for each of the dataset.
+    |-------> _loadlib ---> utils/ : A list of utility plotting and analysis functions required. Imported library call name is "sat"
+    |           |
+    |           |-------> rh07.py : Library and variable definitions for RH (rh07; 384-well) dataset analysis.
+    |           |
+    |           |-------> me49_011.py : Library and variable definitions for ME49 (me49_011) dataset analysis.
+    |           |
+    |           |-------> pru0506.py : Library and variable definitions for Pru (pru0506) dataset analysis.
+    |           |
+    |------> _preprocess -> rh07.py : Preprocessing parameter and plots for RH (rh07; 384-well) dataset analysis.
+    |           |
+    |           |-------> rh019.py : Preprocessing parameter and plots for RH (rh019; 96-well) dataset analysis.
+    |           |
+    |           |-------> me49_011.py : Preprocessing parameter and plots for ME49 (me49_011) dataset analysis.
+    |           |
+    |           |-------> pru0506.py : Preprocessing parameter and plots for Pru (pru0506) dataset analysis.
+    |           |
+    |           |-------> readme.txt : A textfile with descriptions for each of the dataset.
+    |
+    |------> analysis_scripts -> cluster_dependence.py : Script to analyze and identify genes with poor co-variation to the underlying embedding.
+                    |
+                    |----------> align_pru_me49.py : Script to integrate and align ME49 (me49_011) and Pru (pru0506) datasets using Scanorama (Hie, B., Bryson, B. & Berger, B. Nat Biotechnol (2019))
+                    |
+                    |----------> Bradley_GRAs.csv : A comma-separated list of identified GRA genes.
 
-
-```
 
 </p>
 </details>
