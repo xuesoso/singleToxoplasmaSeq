@@ -48,7 +48,7 @@ jupyter-notebook ./Scripts/figures.ipynb
 
 
 
-<details><summary>**What is in "Scripts/"**</summary>
+<details><summary> **What is in "Scripts/"** </summary>
 <p>
 
 ```bash
