@@ -51,6 +51,7 @@ jupyter-notebook ./Scripts/figures.ipynb
 <details><summary> What is in "Scripts/" </summary>
 <p>
 
+```
 --Scripts ----> figures.ipynb : Jupyter notebook to regenerate figures and analysis results.
     |
     |-------> _loadlib ---> utils/ : A list of utility plotting and analysis functions required. Imported library call name is "sat"
@@ -76,6 +77,7 @@ jupyter-notebook ./Scripts/figures.ipynb
                     |----------> align_pru_me49.py : Script to integrate and align ME49 (me49_011) and Pru (pru0506) datasets using Scanorama (Hie, B., Bryson, B. & Berger, B. Nat Biotechnol (2019))
                     |
                     |----------> Bradley_GRAs.csv : A comma-separated list of identified GRA genes.
+```
 
 
 </p>
