@@ -13,7 +13,7 @@ adata.X = sp.sparse.csr_matrix(adata.X)
 adata.obs.index = ['_'.join(x.split('_')[:3]) for x in adata.obs_names]
 #```
 
-If you have loom file that stores RNA velocyto output, we convert .loom to .h5ad first, otherwise errors arise in scvelo
+# If you have loom file that stores RNA velocyto output, we convert .loom to .h5ad first, otherwise errors arise in scvelo
 
 #```python
 adata_loom = scv.read(input_folder_dir+'07_RH_velocyto.loom')

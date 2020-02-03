@@ -15,15 +15,6 @@ adata.X = sp.sparse.csr_matrix(adata.X)
 adata.obs.index = ['_'.join(x.split('_')[:4]) for x in adata.obs_names]
 #```
 
-# If you have loom file that stores RNA velocyto output, we convert .loom to .h5ad first, otherwise errors arise in scvelo
-
-#```python
-# adata_loom = scv.read(input_folder_dir+'07_RH_velocyto.loom')
-# adata_rv = sat.loom_to_h5ad(adata_loom)
-# adata_loom = None
-# sc.write(input_folder_dir+'07_RH_velocyto.h5ad', adata_rv)
-#```
-
 #```python
 #### Process adata and add meta annotation information
 df_star = sat.pp.load_dfStar(star_input)
@@ -32,20 +23,8 @@ adata.var['product'] = sat.get_product(adata.var_names.values, gpd)
 for key in df_star.columns.values:
     adata.obs[key] = df_star.loc[adata.obs_names, key]
 adata.obs = adata.obs.fillna(0)
-#### Load Velocyto h5ad
-# adata_rv = sc.read_h5ad(input_folder_dir+'07_RH_velocyto.h5ad')
-# intersect = np.intersect1d(adata_rv.obs_names.values, adata.obs_names.values)
-# adata_rv = adata_rv[intersect][:, adata.var_names]
-# adata = adata[intersect]
-#### copy over Velocyto information to adata
-# for key in adata_rv.var.columns.values:
-    # adata.var[key] = adata_rv.var[key].copy()
-# for key in adata_rv.layers.keys():
-    # adata.layers[key] = adata_rv.layers[key].copy()
-#```
 
 #```python
-# sc.write(output_dir+'adata_rv.h5ad', adata_rv)
 sc.write(output_dir+'adata_raw.h5ad', adata)
 #```
 

@@ -23,15 +23,15 @@ wget link
 tar -xvf Submission_analysis.tar.gz
 ```
 
-**Optional**
+**Optional:**
 Assuming that one has [anaconda distribution](https://www.anaconda.com/distribution/) of python, create an environment for python 3.6.8 (should work on python 3.6+).
 ```bash
 conda create -n toxoSeq python=3.6.8 ipykernel
 conda activate toxoSeq
 ```
 
-**Optional**
-If you just set up a new conda environment, you need to set up the jupyter kernel as well in order for jupyter notebook to run on this backend.
+**Optional:**
+If you just set up a new conda environment, you may need to set up the jupyter kernel as well in order for jupyter notebook to run on this backend.
 ```bash
 python -m ipykernel install --user
 ```
@@ -41,8 +41,40 @@ Now, install all the required python libraries.
 pip install requirements.txt
 ```
 
-Lastly, you can now open up the jupyter notebook and run the command to regenerate the analysis results.
+Lastly, you can now open up the jupyter notebook and run each cell to regenerate the analysis results.
 ```bash
 jupyter-notebook ./Scripts/figures.ipynb
 ```
+
+
+
+<details><summary>**What is in "Scripts/"**</summary>
+<p>
+
+```bash
+--Scripts----figures.ipynb : Jupyter notebook to regenerate figures and analysis results.
+    |
+    |------->_loadlib--->utils/ : A list of utility plotting and analysis functions required. Imported library call name is "sat"
+                |
+                |------->rh07.py : Library and variable definitions for RH (rh07; 384-well) dataset analysis.
+                |
+                |------->me49_011.py : Library and variable definitions for ME49 (me49_011) dataset analysis.
+                |
+                |------->pru0506.py : Library and variable definitions for Pru (pru0506) dataset analysis.
+                |
+            _preprocess->rh07.py : Preprocessing parameter and plots for RH (rh07; 384-well) dataset analysis.
+                |
+                |------->rh019.py : Preprocessing parameter and plots for RH (rh019; 96-well) dataset analysis.
+                |
+                |------->me49_011.py : Preprocessing parameter and plots for ME49 (me49_011) dataset analysis.
+                |
+                |------->pru0506.py : Preprocessing parameter and plots for Pru (pru0506) dataset analysis.
+                |
+                |------->readme.txt : A textfile with descriptions for each of the dataset.
+
+
+```
+
+</p>
+</details>
 
