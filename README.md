@@ -7,5 +7,5 @@ A respository that includes scripts and jupyter notebooks to re-generate analysi
 Interactive atlas
 -----------------
 We have also generated an interactive browser to visualize our scRNA-seq dataset. [Link here](http://st-atlas.org)
-<img src="./images/st_atlas_example.png" title="Screenshot" width="800"/>
+<img src="./images/st_atlas_example.png" title="Screenshot" width="400"/>
 
