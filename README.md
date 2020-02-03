@@ -21,7 +21,7 @@ git clone https://github.com/xuesoso/singleToxoplasmaSeq
 
 Then download the bundled scripts and data to the repository folder in order to regenerate analysis results and figures.
 <p>
-<a href="https://drive.google.com/uc?export=download&id=1-lMhILWM8xLrLRul0YFO3_4Tvij5xVeV" download>Download data</a>
+<a href="https://drive.google.com/uc?export=download&id=19gt5RGxCtVs5DMPArr2HuY4SO-6PN13e" download>Download data</a>
 </p>
 
 Decompress the files
