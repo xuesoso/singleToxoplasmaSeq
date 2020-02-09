@@ -45,7 +45,7 @@ python -m ipykernel install --user
 
 Now, install all the required python libraries.
 ```bash
-pip install requirements.txt
+pip install -r requirements.txt
 ```
 
 Lastly, you can now open up the jupyter notebook and run each cell to regenerate the analysis results.
