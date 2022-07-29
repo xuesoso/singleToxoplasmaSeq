@@ -57,7 +57,7 @@ louvain==0.6.1
 MarkupSafe==1.1.1
 matplotlib==3.0.3
 matplotlib-venn==0.11.5
-mistune==0.8.4
+mistune==2.0.3
 mnnpy==0.1.9.5
 rpy2==3.0.4
 sam-algorithm==0.6.7
